@@ -12,6 +12,16 @@ indices:
       - /creativecloud/**
       - /products/**
       - /ai/**
+      - /education/**
+      - /partnerpromo/**
+      - /downloads/**
+      - /careers/**
+      - /affiliates/**
+      - /check-in/**
+      - /communities/**
+      - /confirmation/**
+      - /devnet/**
+      - /diversity/**
     target: /cc-shared/assets/query-index.xlsx
     properties:
       title:
@@ -63,6 +73,16 @@ indices:
       - /au/creativecloud/**
       - /au/products/**
       - /au/ai/**
+      - /au/education/**
+      - /au/partnerpromo/**
+      - /au/downloads/**
+      - /au/careers/**
+      - /au/affiliates/**
+      - /au/check-in/**
+      - /au/communities/**
+      - /au/confirmation/**
+      - /au/devnet/**
+      - /au/diversity/**
     target: /au/cc-shared/assets/query-index.xlsx
   
   cards-au:
@@ -77,6 +97,16 @@ indices:
       - /de/creativecloud/**
       - /de/products/**
       - /de/ai/**
+      - /de/education/**
+      - /de/partnerpromo/**
+      - /de/downloads/**
+      - /de/careers/**
+      - /de/affiliates/**
+      - /de/check-in/**
+      - /de/communities/**
+      - /de/confirmation/**
+      - /de/devnet/**
+      - /de/diversity/**
     target: /de/cc-shared/assets/query-index.xlsx
   
   cards-de:
@@ -91,6 +121,16 @@ indices:
       - /es/creativecloud/**
       - /es/products/**
       - /es/ai/**
+      - /es/education/**
+      - /es/partnerpromo/**
+      - /es/downloads/**
+      - /es/careers/**
+      - /es/affiliates/**
+      - /es/check-in/**
+      - /es/communities/**
+      - /es/confirmation/**
+      - /es/devnet/**
+      - /es/diversity/**
     target: /es/cc-shared/assets/query-index.xlsx
 
   cards-es:
@@ -105,6 +145,16 @@ indices:
       - /fr/creativecloud/**
       - /fr/products/**
       - /fr/ai/**
+      - /fr/education/**
+      - /fr/partnerpromo/**
+      - /fr/downloads/**
+      - /fr/careers/**
+      - /fr/affiliates/**
+      - /fr/check-in/**
+      - /fr/communities/**
+      - /fr/confirmation/**
+      - /fr/devnet/**
+      - /fr/diversity/**
     target: /fr/cc-shared/assets/query-index.xlsx
 
   cards-fr:
@@ -119,6 +169,16 @@ indices:
       - /it/creativecloud/**
       - /it/products/**
       - /it/ai/**
+      - /it/education/**
+      - /it/partnerpromo/**
+      - /it/downloads/**
+      - /it/careers/**
+      - /it/affiliates/**
+      - /it/check-in/**
+      - /it/communities/**
+      - /it/confirmation/**
+      - /it/devnet/**
+      - /it/diversity/**
     target: /it/cc-shared/assets/query-index.xlsx
   
   cards-it:
@@ -133,6 +193,16 @@ indices:
       - /jp/creativecloud/**
       - /jp/products/**
       - /jp/ai/**
+      - /jp/education/**
+      - /jp/partnerpromo/**
+      - /jp/downloads/**
+      - /jp/careers/**
+      - /jp/affiliates/**
+      - /jp/check-in/**
+      - /jp/communities/**
+      - /jp/confirmation/**
+      - /jp/devnet/**
+      - /jp/diversity/**
     target: /jp/cc-shared/assets/query-index.xlsx
 
   cards-jp:
@@ -147,6 +217,16 @@ indices:
       - /kr/creativecloud/**
       - /kr/products/**
       - /kr/ai/**
+      - /kr/education/**
+      - /kr/partnerpromo/**
+      - /kr/downloads/**
+      - /kr/careers/**
+      - /kr/affiliates/**
+      - /kr/check-in/**
+      - /kr/communities/**
+      - /kr/confirmation/**
+      - /kr/devnet/**
+      - /kr/diversity/**
     target: /kr/cc-shared/assets/query-index.xlsx
 
   cards-kr:
@@ -161,6 +241,16 @@ indices:
       - /ru/creativecloud/**
       - /ru/products/**
       - /ru/ai/**
+      - /ru/education/**
+      - /ru/partnerpromo/**
+      - /ru/downloads/**
+      - /ru/careers/**
+      - /ru/affiliates/**
+      - /ru/check-in/**
+      - /ru/communities/**
+      - /ru/confirmation/**
+      - /ru/devnet/**
+      - /ru/diversity/**
     target: /ru/cc-shared/assets/query-index.xlsx
 
   cards-ru:
@@ -175,6 +265,16 @@ indices:
       - /hk_zh/creativecloud/**
       - /hk_zh/products/**
       - /hk_zh/ai/**
+      - /hk_zh/education/**
+      - /hk_zh/partnerpromo/**
+      - /hk_zh/downloads/**
+      - /hk_zh/careers/**
+      - /hk_zh/affiliates/**
+      - /hk_zh/check-in/**
+      - /hk_zh/communities/**
+      - /hk_zh/confirmation/**
+      - /hk_zh/devnet/**
+      - /hk_zh/diversity/**
     target: /hk_zh/cc-shared/assets/query-index.xlsx
 
   cards-hk_zh:
@@ -189,6 +289,16 @@ indices:
       - /tw/creativecloud/**
       - /tw/products/**
       - /tw/ai/**
+      - /tw/education/**
+      - /tw/partnerpromo/**
+      - /tw/downloads/**
+      - /tw/careers/**
+      - /tw/affiliates/**
+      - /tw/check-in/**
+      - /tw/communities/**
+      - /tw/confirmation/**
+      - /tw/devnet/**
+      - /tw/diversity/**
     target: /tw/cc-shared/assets/query-index.xlsx  
 
   cards-tw:
@@ -203,6 +313,16 @@ indices:
       - /nl/creativecloud/**
       - /nl/products/**
       - /nl/ai/**
+      - /nl/education/**
+      - /nl/partnerpromo/**
+      - /nl/downloads/**
+      - /nl/careers/**
+      - /nl/affiliates/**
+      - /nl/check-in/**
+      - /nl/communities/**
+      - /nl/confirmation/**
+      - /nl/devnet/**
+      - /nl/diversity/**
     target: /nl/cc-shared/assets/query-index.xlsx
 
   cards-nl:
@@ -217,6 +337,16 @@ indices:
       - /pl/creativecloud/**
       - /pl/products/**
       - /pl/ai/**
+      - /pl/education/**
+      - /pl/partnerpromo/**
+      - /pl/downloads/**
+      - /pl/careers/**
+      - /pl/affiliates/**
+      - /pl/check-in/**
+      - /pl/communities/**
+      - /pl/confirmation/**
+      - /pl/devnet/**
+      - /pl/diversity/**
     target: /pl/cc-shared/assets/query-index.xlsx
 
   cards-pl:
@@ -231,6 +361,16 @@ indices:
       - /tr/creativecloud/**
       - /tr/products/**
       - /tr/ai/**
+      - /tr/education/**
+      - /tr/partnerpromo/**
+      - /tr/downloads/**
+      - /tr/careers/**
+      - /tr/affiliates/**
+      - /tr/check-in/**
+      - /tr/communities/**
+      - /tr/confirmation/**
+      - /tr/devnet/**
+      - /tr/diversity/**
     target: /tr/cc-shared/assets/query-index.xlsx  
 
   cards-tr:
@@ -245,6 +385,16 @@ indices:
       - /uk/creativecloud/**
       - /uk/products/**
       - /uk/ai/**
+      - /uk/education/**
+      - /uk/partnerpromo/**
+      - /uk/downloads/**
+      - /uk/careers/**
+      - /uk/affiliates/**
+      - /uk/check-in/**
+      - /uk/communities/**
+      - /uk/confirmation/**
+      - /uk/devnet/**
+      - /uk/diversity/**
     target: /uk/cc-shared/assets/query-index.xlsx
 
   cards-uk:
@@ -259,6 +409,16 @@ indices:
       - /ca/creativecloud/**
       - /ca/products/**
       - /ca/ai/**
+      - /ca/education/**
+      - /ca/partnerpromo/**
+      - /ca/downloads/**
+      - /ca/careers/**
+      - /ca/affiliates/**
+      - /ca/check-in/**
+      - /ca/communities/**
+      - /ca/confirmation/**
+      - /ca/devnet/**
+      - /ca/diversity/**
     target: /ca/cc-shared/assets/query-index.xlsx
 
   cards-ca:
@@ -273,6 +433,16 @@ indices:
       - /cn/creativecloud/**
       - /cn/products/**
       - /cn/ai/**
+      - /cn/education/**
+      - /cn/partnerpromo/**
+      - /cn/downloads/**
+      - /cn/careers/**
+      - /cn/affiliates/**
+      - /cn/check-in/**
+      - /cn/communities/**
+      - /cn/confirmation/**
+      - /cn/devnet/**
+      - /cn/diversity/**
     target: /cn/cc-shared/assets/query-index.xlsx
 
   cards-cn:
@@ -287,6 +457,16 @@ indices:
       - /ae_ar/creativecloud/**
       - /ae_ar/products/**
       - /ae_ar/ai/**
+      - /ae_ar/education/**
+      - /ae_ar/partnerpromo/**
+      - /ae_ar/downloads/**
+      - /ae_ar/careers/**
+      - /ae_ar/affiliates/**
+      - /ae_ar/check-in/**
+      - /ae_ar/communities/**
+      - /ae_ar/confirmation/**
+      - /ae_ar/devnet/**
+      - /ae_ar/diversity/**
     target: /ae_ar/cc-shared/assets/query-index.xlsx
 
   cards-ae_ar:
@@ -301,6 +481,16 @@ indices:
       - /ae_en/creativecloud/**
       - /ae_en/products/**
       - /ae_en/ai/**
+      - /ae_en/education/**
+      - /ae_en/partnerpromo/**
+      - /ae_en/downloads/**
+      - /ae_en/careers/**
+      - /ae_en/affiliates/**
+      - /ae_en/check-in/**
+      - /ae_en/communities/**
+      - /ae_en/confirmation/**
+      - /ae_en/devnet/**
+      - /ae_en/diversity/**
     target: /ae_en/cc-shared/assets/query-index.xlsx
 
   cards-ae_en:
@@ -315,6 +505,16 @@ indices:
       - /at/creativecloud/**
       - /at/products/**
       - /at/ai/**
+      - /at/education/**
+      - /at/partnerpromo/**
+      - /at/downloads/**
+      - /at/careers/**
+      - /at/affiliates/**
+      - /at/check-in/**
+      - /at/communities/**
+      - /at/confirmation/**
+      - /at/devnet/**
+      - /at/diversity/**
     target: /at/cc-shared/assets/query-index.xlsx
 
   cards-at:
@@ -329,6 +529,16 @@ indices:
       - /be_en/creativecloud/**
       - /be_en/products/**
       - /be_en/ai/**
+      - /be_en/education/**
+      - /be_en/partnerpromo/**
+      - /be_en/downloads/**
+      - /be_en/careers/**
+      - /be_en/affiliates/**
+      - /be_en/check-in/**
+      - /be_en/communities/**
+      - /be_en/confirmation/**
+      - /be_en/devnet/**
+      - /be_en/diversity/**
     target: /be_en/cc-shared/assets/query-index.xlsx
 
   cards-be_en:
@@ -343,6 +553,16 @@ indices:
       - /be_fr/creativecloud/**
       - /be_fr/products/**
       - /be_fr/ai/**
+      - /be_fr/education/**
+      - /be_fr/partnerpromo/**
+      - /be_fr/downloads/**
+      - /be_fr/careers/**
+      - /be_fr/affiliates/**
+      - /be_fr/check-in/**
+      - /be_fr/communities/**
+      - /be_fr/confirmation/**
+      - /be_fr/devnet/**
+      - /be_fr/diversity/**
     target: /be_fr/cc-shared/assets/query-index.xlsx
 
   cards-be_fr:
@@ -357,6 +577,16 @@ indices:
       - /ca_fr/creativecloud/**
       - /ca_fr/products/**
       - /ca_fr/ai/**
+      - /ca_fr/education/**
+      - /ca_fr/partnerpromo/**
+      - /ca_fr/downloads/**
+      - /ca_fr/careers/**
+      - /ca_fr/affiliates/**
+      - /ca_fr/check-in/**
+      - /ca_fr/communities/**
+      - /ca_fr/confirmation/**
+      - /ca_fr/devnet/**
+      - /ca_fr/diversity/**
     target: /ca_fr/cc-shared/assets/query-index.xlsx
 
   cards-ca_fr:
@@ -371,6 +601,16 @@ indices:
       - /ch_de/creativecloud/**
       - /ch_de/products/**
       - /ch_de/ai/**
+      - /ch_de/education/**
+      - /ch_de/partnerpromo/**
+      - /ch_de/downloads/**
+      - /ch_de/careers/**
+      - /ch_de/affiliates/**
+      - /ch_de/check-in/**
+      - /ch_de/communities/**
+      - /ch_de/confirmation/**
+      - /ch_de/devnet/**
+      - /ch_de/diversity/**
     target: /ch_de/cc-shared/assets/query-index.xlsx
 
   cards-ch_de:
@@ -385,6 +625,16 @@ indices:
       - /ch_fr/creativecloud/**
       - /ch_fr/products/**
       - /ch_fr/ai/**
+      - /ch_fr/education/**
+      - /ch_fr/partnerpromo/**
+      - /ch_fr/downloads/**
+      - /ch_fr/careers/**
+      - /ch_fr/affiliates/**
+      - /ch_fr/check-in/**
+      - /ch_fr/communities/**
+      - /ch_fr/confirmation/**
+      - /ch_fr/devnet/**
+      - /ch_fr/diversity/**
     target: /ch_fr/cc-shared/assets/query-index.xlsx
 
   cards-ch_fr:
@@ -399,6 +649,16 @@ indices:
       - /cl/creativecloud/**
       - /cl/products/**
       - /cl/ai/**
+      - /cl/education/**
+      - /cl/partnerpromo/**
+      - /cl/downloads/**
+      - /cl/careers/**
+      - /cl/affiliates/**
+      - /cl/check-in/**
+      - /cl/communities/**
+      - /cl/confirmation/**
+      - /cl/devnet/**
+      - /cl/diversity/**
     target: /cl/cc-shared/assets/query-index.xlsx
 
   cards-cl:
@@ -413,6 +673,16 @@ indices:
       - /gr_en/creativecloud/**
       - /gr_en/products/**
       - /gr_en/ai/**
+      - /gr_en/education/**
+      - /gr_en/partnerpromo/**
+      - /gr_en/downloads/**
+      - /gr_en/careers/**
+      - /gr_en/affiliates/**
+      - /gr_en/check-in/**
+      - /gr_en/communities/**
+      - /gr_en/confirmation/**
+      - /gr_en/devnet/**
+      - /gr_en/diversity/**
     target: /gr_en/cc-shared/assets/query-index.xlsx  
 
   cards-gr_en:
@@ -427,6 +697,16 @@ indices:
       - /hk_en/creativecloud/**
       - /hk_en/products/**
       - /hk_en/ai/**
+      - /hk_en/education/**
+      - /hk_en/partnerpromo/**
+      - /hk_en/downloads/**
+      - /hk_en/careers/**
+      - /hk_en/affiliates/**
+      - /hk_en/check-in/**
+      - /hk_en/communities/**
+      - /hk_en/confirmation/**
+      - /hk_en/devnet/**
+      - /hk_en/diversity/**
     target: /hk_en/cc-shared/assets/query-index.xlsx
 
   cards-hk_en:
@@ -441,6 +721,16 @@ indices:
       - /ie/creativecloud/**
       - /ie/products/**
       - /ie/ai/**
+      - /ie/education/**
+      - /ie/partnerpromo/**
+      - /ie/downloads/**
+      - /ie/careers/**
+      - /ie/affiliates/**
+      - /ie/check-in/**
+      - /ie/communities/**
+      - /ie/confirmation/**
+      - /ie/devnet/**
+      - /ie/diversity/**
     target: /ie/cc-shared/assets/query-index.xlsx  
 
   cards-ie:
@@ -455,6 +745,16 @@ indices:
       - /il_en/creativecloud/**
       - /il_en/products/**
       - /il_en/ai/**
+      - /il_en/education/**
+      - /il_en/partnerpromo/**
+      - /il_en/downloads/**
+      - /il_en/careers/**
+      - /il_en/affiliates/**
+      - /il_en/check-in/**
+      - /il_en/communities/**
+      - /il_en/confirmation/**
+      - /il_en/devnet/**
+      - /il_en/diversity/**
     target: /il_en/cc-shared/assets/query-index.xlsx
 
   cards-il_en:
@@ -469,6 +769,16 @@ indices:
       - /in/creativecloud/**
       - /in/products/**
       - /in/ai/**
+      - /in/education/**
+      - /in/partnerpromo/**
+      - /in/downloads/**
+      - /in/careers/**
+      - /in/affiliates/**
+      - /in/check-in/**
+      - /in/communities/**
+      - /in/confirmation/**
+      - /in/devnet/**
+      - /in/diversity/**
     target: /in/cc-shared/assets/query-index.xlsx
 
   cards-in:
@@ -483,6 +793,16 @@ indices:
       - /lt/creativecloud/**
       - /lt/products/**
       - /lt/ai/**
+      - /lt/education/**
+      - /lt/partnerpromo/**
+      - /lt/downloads/**
+      - /lt/careers/**
+      - /lt/affiliates/**
+      - /lt/check-in/**
+      - /lt/communities/**
+      - /lt/confirmation/**
+      - /lt/devnet/**
+      - /lt/diversity/**
     target: /lt/cc-shared/assets/query-index.xlsx
 
   cards-lt:
@@ -497,6 +817,16 @@ indices:
       - /lu_de/creativecloud/**
       - /lu_de/products/**
       - /lu_de/ai/**
+      - /lu_de/education/**
+      - /lu_de/partnerpromo/**
+      - /lu_de/downloads/**
+      - /lu_de/careers/**
+      - /lu_de/affiliates/**
+      - /lu_de/check-in/**
+      - /lu_de/communities/**
+      - /lu_de/confirmation/**
+      - /lu_de/devnet/**
+      - /lu_de/diversity/**
     target: /lu_de/cc-shared/assets/query-index.xlsx
 
   cards-lu_de:
@@ -511,6 +841,16 @@ indices:
       - /lu_en/creativecloud/**
       - /lu_en/products/**
       - /lu_en/ai/**
+      - /lu_en/education/**
+      - /lu_en/partnerpromo/**
+      - /lu_en/downloads/**
+      - /lu_en/careers/**
+      - /lu_en/affiliates/**
+      - /lu_en/check-in/**
+      - /lu_en/communities/**
+      - /lu_en/confirmation/**
+      - /lu_en/devnet/**
+      - /lu_en/diversity/**
     target: /lu_en/cc-shared/assets/query-index.xlsx
 
   cards-lu_en:
@@ -525,6 +865,16 @@ indices:
       - /lu_fr/creativecloud/**
       - /lu_fr/products/**
       - /lu_fr/ai/**
+      - /lu_fr/education/**
+      - /lu_fr/partnerpromo/**
+      - /lu_fr/downloads/**
+      - /lu_fr/careers/**
+      - /lu_fr/affiliates/**
+      - /lu_fr/check-in/**
+      - /lu_fr/communities/**
+      - /lu_fr/confirmation/**
+      - /lu_fr/devnet/**
+      - /lu_fr/diversity/**
     target: /lu_fr/cc-shared/assets/query-index.xlsx
 
   cards-lu_fr:
@@ -539,6 +889,16 @@ indices:
       - /mena_en/creativecloud/**
       - /mena_en/products/**
       - /mena_en/ai/**
+      - /mena_en/education/**
+      - /mena_en/partnerpromo/**
+      - /mena_en/downloads/**
+      - /mena_en/careers/**
+      - /mena_en/affiliates/**
+      - /mena_en/check-in/**
+      - /mena_en/communities/**
+      - /mena_en/confirmation/**
+      - /mena_en/devnet/**
+      - /mena_en/diversity/**
     target: /mena_en/cc-shared/assets/query-index.xlsx
 
   cards-mena_en:
@@ -553,6 +913,16 @@ indices:
       - /nz/creativecloud/**
       - /nz/products/**
       - /nz/ai/**
+      - /nz/education/**
+      - /nz/partnerpromo/**
+      - /nz/downloads/**
+      - /nz/careers/**
+      - /nz/affiliates/**
+      - /nz/check-in/**
+      - /nz/communities/**
+      - /nz/confirmation/**
+      - /nz/devnet/**
+      - /nz/diversity/**
     target: /nz/cc-shared/assets/query-index.xlsx
 
   cards-nz:
@@ -567,6 +937,16 @@ indices:
       - /sa_ar/creativecloud/**
       - /sa_ar/products/**
       - /sa_ar/ai/**
+      - /sa_ar/education/**
+      - /sa_ar/partnerpromo/**
+      - /sa_ar/downloads/**
+      - /sa_ar/careers/**
+      - /sa_ar/affiliates/**
+      - /sa_ar/check-in/**
+      - /sa_ar/communities/**
+      - /sa_ar/confirmation/**
+      - /sa_ar/devnet/**
+      - /sa_ar/diversity/**
     target: /sa_ar/cc-shared/assets/query-index.xlsx  
 
   cards-sa_ar:
@@ -581,6 +961,16 @@ indices:
       - /sa_en/creativecloud/**
       - /sa_en/products/**
       - /sa_en/ai/**
+      - /sa_en/education/**
+      - /sa_en/partnerpromo/**
+      - /sa_en/downloads/**
+      - /sa_en/careers/**
+      - /sa_en/affiliates/**
+      - /sa_en/check-in/**
+      - /sa_en/communities/**
+      - /sa_en/confirmation/**
+      - /sa_en/devnet/**
+      - /sa_en/diversity/**
     target: /sa_en/cc-shared/assets/query-index.xlsx
 
    cards-sa_en:
@@ -595,6 +985,16 @@ indices:
       - /th_en/creativecloud/**
       - /th_en/products/**
       - /th_en/ai/**
+      - /th_en/education/**
+      - /th_en/partnerpromo/**
+      - /th_en/downloads/**
+      - /th_en/careers/**
+      - /th_en/affiliates/**
+      - /th_en/check-in/**
+      - /th_en/communities/**
+      - /th_en/confirmation/**
+      - /th_en/devnet/**
+      - /th_en/diversity/**
     target: /th_en/cc-shared/assets/query-index.xlsx
 
   cards-th_en:
@@ -609,6 +1009,16 @@ indices:
       - /th_th/creativecloud/**
       - /th_th/products/**
       - /th_th/ai/**
+      - /th_th/education/**
+      - /th_th/partnerpromo/**
+      - /th_th/downloads/**
+      - /th_th/careers/**
+      - /th_th/affiliates/**
+      - /th_th/check-in/**
+      - /th_th/communities/**
+      - /th_th/confirmation/**
+      - /th_th/devnet/**
+      - /th_th/diversity/**
     target: /th_th/cc-shared/assets/query-index.xlsx
 
   cards-th_th:
@@ -623,6 +1033,16 @@ indices:
       - /za/creativecloud/**
       - /za/products/**
       - /za/ai/**
+      - /za/education/**
+      - /za/partnerpromo/**
+      - /za/downloads/**
+      - /za/careers/**
+      - /za/affiliates/**
+      - /za/check-in/**
+      - /za/communities/**
+      - /za/confirmation/**
+      - /za/devnet/**
+      - /za/diversity/**
     target: /za/cc-shared/assets/query-index.xlsx
 
   cards-za:
@@ -637,6 +1057,16 @@ indices:
       - /africa/creativecloud/**
       - /africa/products/**
       - /africa/ai/**
+      - /africa/education/**
+      - /africa/partnerpromo/**
+      - /africa/downloads/**
+      - /africa/careers/**
+      - /africa/affiliates/**
+      - /africa/check-in/**
+      - /africa/communities/**
+      - /africa/confirmation/**
+      - /africa/devnet/**
+      - /africa/diversity/**
     target: /africa/cc-shared/assets/query-index.xlsx
 
   cards-africa:
@@ -651,6 +1081,16 @@ indices:
       - /ar/creativecloud/**
       - /ar/products/**
       - /ar/ai/**
+      - /ar/education/**
+      - /ar/partnerpromo/**
+      - /ar/downloads/**
+      - /careers/**
+      - /ar/affiliates/**
+      - /ar/check-in/**
+      - /ar/communities/**
+      - /ar/confirmation/**
+      - /ar/devnet/**
+      - /ar/diversity/**
     target: /ar/cc-shared/assets/query-index.xlsx
 
   cards-ar:
@@ -665,6 +1105,16 @@ indices:
       - /co/creativecloud/**
       - /co/products/**
       - /co/ai/**
+      - /co/education/**
+      - /co/partnerpromo/**
+      - /co/downloads/**
+      - /co/careers/**
+      - /co/affiliates/**
+      - /co/check-in/**
+      - /co/communities/**
+      - /co/confirmation/**
+      - /co/devnet/**
+      - /co/diversity/**
     target: /co/cc-shared/assets/query-index.xlsx
 
   cards-co:
@@ -679,6 +1129,16 @@ indices:
       - /cr/creativecloud/**
       - /cr/products/**
       - /cr/ai/**
+      - /cr/education/**
+      - /cr/partnerpromo/**
+      - /cr/downloads/**
+      - /cr/careers/**
+      - /cr/affiliates/**
+      - /cr/check-in/**
+      - /cr/communities/**
+      - /cr/confirmation/**
+      - /cr/devnet/**
+      - /cr/diversity/**
     target: /cr/cc-shared/assets/query-index.xlsx
 
   cards-cr:
@@ -693,6 +1153,16 @@ indices:
       - /ec/creativecloud/**
       - /ec/products/**
       - /ec/ai/**
+      - /ec/education/**
+      - /ec/partnerpromo/**
+      - /ec/downloads/**
+      - /ec/careers/**
+      - /ec/affiliates/**
+      - /ec/check-in/**
+      - /ec/communities/**
+      - /ec/confirmation/**
+      - /ec/devnet/**
+      - /ec/diversity/**
     target: /ec/cc-shared/assets/query-index.xlsx
 
   cards-ec:
@@ -707,6 +1177,16 @@ indices:
       - /eg_ar/creativecloud/**
       - /eg_ar/products/**
       - /eg_ar/ai/**
+      - /eg_ar/education/**
+      - /eg_ar/partnerpromo/**
+      - /eg_ar/downloads/**
+      - /eg_ar/careers/**
+      - /eg_ar/affiliates/**
+      - /eg_ar/check-in/**
+      - /eg_ar/communities/**
+      - /eg_ar/confirmation/**
+      - /eg_ar/devnet/**
+      - /eg_ar/diversity/**
     target: /eg_ar/cc-shared/assets/query-index.xlsx
 
   cards-eg_ar:
@@ -721,6 +1201,16 @@ indices:
       - /eg_en/creativecloud/**
       - /eg_en/products/**
       - /eg_en/ai/**
+      - /eg_en/education/**
+      - /eg_en/partnerpromo/**
+      - /eg_en/downloads/**
+      - /eg_en/careers/**
+      - /eg_en/affiliates/**
+      - /eg_en/check-in/**
+      - /eg_en/communities/**
+      - /eg_en/confirmation/**
+      - /eg_en/devnet/**
+      - /eg_en/diversity/**
     target: /eg_en/cc-shared/assets/query-index.xlsx
 
   cards-eg_en:
@@ -735,6 +1225,16 @@ indices:
       - /gr_el/creativecloud/**
       - /gr_el/products/**
       - /gr_el/ai/**
+      - /gr_el/education/**
+      - /gr_el/partnerpromo/**
+      - /gr_el/downloads/**
+      - /gr_el/careers/**
+      - /gr_el/affiliates/**
+      - /gr_el/check-in/**
+      - /gr_el/communities/**
+      - /gr_el/confirmation/**
+      - /gr_el/devnet/**
+      - /gr_el/diversity/**
     target: /gr_el/cc-shared/assets/query-index.xlsx
 
   cards-gr_el:
@@ -749,6 +1249,16 @@ indices:
       - /gt/creativecloud/**
       - /gt/products/**
       - /gt/ai/**
+      - /gt/education/**
+      - /gt/partnerpromo/**
+      - /gt/downloads/**
+      - /gt/careers/**
+      - /gt/affiliates/**
+      - /gt/check-in/**
+      - /gt/communities/**
+      - /gt/confirmation/**
+      - /gt/devnet/**
+      - /gt/diversity/**
     target: /gt/cc-shared/assets/query-index.xlsx
 
   cards-gt:
@@ -763,6 +1273,16 @@ indices:
       - /id_en/creativecloud/**
       - /id_en/products/**
       - /id_en/ai/**
+      - /id_en/education/**
+      - /id_en/partnerpromo/**
+      - /id_en/downloads/**
+      - /id_en/careers/**
+      - /id_en/affiliates/**
+      - /id_en/check-in/**
+      - /id_en/communities/**
+      - /id_en/confirmation/**
+      - /id_en/devnet/**
+      - /id_en/diversity/**
     target: /id_en/cc-shared/assets/query-index.xlsx
 
   cards-id_en:
@@ -777,6 +1297,16 @@ indices:
       - /id_id/creativecloud/**
       - /id_id/products/**
       - /id_id/ai/**
+      - /id_id/education/**
+      - /id_id/partnerpromo/**
+      - /id_id/downloads/**
+      - /id_id/careers/**
+      - /id_id/affiliates/**
+      - /id_id/check-in/**
+      - /id_id/communities/**
+      - /id_id/confirmation/**
+      - /id_id/devnet/**
+      - /id_id/diversity/**
     target: /id_id/cc-shared/assets/query-index.xlsx
 
   cards-id_id:
@@ -791,6 +1321,16 @@ indices:
       - /in_hi/creativecloud/**
       - /in_hi/products/**
       - /in_hi/ai/**
+      - /in_hi/education/**
+      - /in_hi/partnerpromo/**
+      - /in_hi/downloads/**
+      - /in_hi/careers/**
+      - /in_hi/affiliates/**
+      - /in_hi/check-in/**
+      - /in_hi/communities/**
+      - /in_hi/confirmation/**
+      - /in_hi/devnet/**
+      - /in_hi/diversity/**
     target: /in_hi/cc-shared/assets/query-index.xlsx
 
   cards-in_hi:
@@ -805,6 +1345,16 @@ indices:
       - /kw_ar/creativecloud/**
       - /kw_ar/products/**
       - /kw_ar/ai/**
+      - /kw_ar/education/**
+      - /kw_ar/partnerpromo/**
+      - /kw_ar/downloads/**
+      - /kw_ar/careers/**
+      - /kw_ar/affiliates/**
+      - /kw_ar/check-in/**
+      - /kw_ar/communities/**
+      - /kw_ar/confirmation/**
+      - /kw_ar/devnet/**
+      - /kw_ar/diversity/**
     target: /kw_ar/cc-shared/assets/query-index.xlsx
 
   cards-kw_ar:
@@ -819,6 +1369,16 @@ indices:
       - /kw_en/creativecloud/**
       - /kw_en/products/**
       - /kw_en/ai/**
+      - /kw_en/education/**
+      - /kw_en/partnerpromo/**
+      - /kw_en/downloads/**
+      - /kw_en/careers/**
+      - /kw_en/affiliates/**
+      - /kw_en/check-in/**
+      - /kw_en/communities/**
+      - /kw_en/confirmation/**
+      - /kw_en/devnet/**
+      - /kw_en/diversity/**
     target: /kw_en/cc-shared/assets/query-index.xlsx
 
   cards-kw_en:
@@ -833,6 +1393,16 @@ indices:
       - /my_en/creativecloud/**
       - /my_en/products/**
       - /my_en/ai/**
+      - /my_en/education/**
+      - /my_en/partnerpromo/**
+      - /my_en/downloads/**
+      - /my_en/careers/**
+      - /my_en/affiliates/**
+      - /my_en/check-in/**
+      - /my_en/communities/**
+      - /my_en/confirmation/**
+      - /my_en/devnet/**
+      - /my_en/diversity/**
     target: /my_en/cc-shared/assets/query-index.xlsx
 
   cards-my_en:
@@ -847,6 +1417,16 @@ indices:
       - /my_ms/creativecloud/**
       - /my_ms/products/**
       - /my_ms/ai/**
+      - /my_ms/education/**
+      - /my_ms/partnerpromo/**
+      - /my_ms/downloads/**
+      - /my_ms/careers/**
+      - /my_ms/affiliates/**
+      - /my_ms/check-in/**
+      - /my_ms/communities/**
+      - /my_ms/confirmation/**
+      - /my_ms/devnet/**
+      - /my_ms/diversity/**
     target: /my_ms/cc-shared/assets/query-index.xlsx
 
   cards-my_ms:
@@ -861,6 +1441,16 @@ indices:
       - /ng/creativecloud/**
       - /ng/products/**
       - /ng/ai/**
+      - /ng/education/**
+      - /ng/partnerpromo/**
+      - /ng/downloads/**
+      - /ng/careers/**
+      - /ng/affiliates/**
+      - /ng/check-in/**
+      - /ng/communities/**
+      - /ng/confirmation/**
+      - /ng/devnet/**
+      - /ng/diversity/**
     target: /ng/cc-shared/assets/query-index.xlsx  
 
   cards-ng:
@@ -875,6 +1465,16 @@ indices:
       - /pe/creativecloud/**
       - /pe/products/**
       - /pe/ai/**
+      - /pe/education/**
+      - /pe/partnerpromo/**
+      - /pe/downloads/**
+      - /pe/careers/**
+      - /pe/affiliates/**
+      - /pe/check-in/**
+      - /pe/communities/**
+      - /pe/confirmation/**
+      - /pe/devnet/**
+      - /pe/diversity/**
     target: /pe/cc-shared/assets/query-index.xlsx  
 
   cards-pe:
@@ -889,6 +1489,16 @@ indices:
       - /ph_en/creativecloud/**
       - /ph_en/products/**
       - /ph_en/ai/**
+      - /ph_en/education/**
+      - /ph_en/partnerpromo/**
+      - /ph_en/downloads/**
+      - /ph_en/careers/**
+      - /ph_en/affiliates/**
+      - /ph_en/check-in/**
+      - /ph_en/communities/**
+      - /ph_en/confirmation/**
+      - /ph_en/devnet/**
+      - /ph_en/diversity/**
     target: /ph_en/cc-shared/assets/query-index.xlsx
 
   cards-ph_en:
@@ -903,6 +1513,16 @@ indices:
       - /ph_fil/creativecloud/**
       - /ph_fil/products/**
       - /ph_fil/ai/**
+      - /ph_fil/education/**
+      - /ph_fil/partnerpromo/**
+      - /ph_fil/downloads/**
+      - /ph_fil/careers/**
+      - /ph_fil/affiliates/**
+      - /ph_fil/check-in/**
+      - /ph_fil/communities/**
+      - /ph_fil/confirmation/**
+      - /ph_fil/devnet/**
+      - /ph_fil/diversity/**
     target: /ph_fil/cc-shared/assets/query-index.xlsx
 
   cards-ph_fil:
@@ -917,6 +1537,16 @@ indices:
       - /pr/creativecloud/**
       - /pr/products/**
       - /pr/ai/**
+      - /pr/education/**
+      - /pr/partnerpromo/**
+      - /pr/downloads/**
+      - /pr/careers/**
+      - /pr/affiliates/**
+      - /pr/check-in/**
+      - /pr/communities/**
+      - /pr/confirmation/**
+      - /pr/devnet/**
+      - /pr/diversity/**
     target: /pr/cc-shared/assets/query-index.xlsx  
 
   cards-pr:
@@ -931,6 +1561,16 @@ indices:
       - /qa_ar/creativecloud/**
       - /qa_ar/products/**
       - /qa_ar/ai/**
+      - /qa_ar/education/**
+      - /qa_ar/partnerpromo/**
+      - /qa_ar/downloads/**
+      - /qa_ar/careers/**
+      - /qa_ar/affiliates/**
+      - /qa_ar/check-in/**
+      - /qa_ar/communities/**
+      - /qa_ar/confirmation/**
+      - /qa_ar/devnet/**
+      - /qa_ar/diversity/**
     target: /qa_ar/cc-shared/assets/query-index.xlsx
 
   cards-qa_ar:
@@ -945,6 +1585,16 @@ indices:
       - /qa_en/creativecloud/**
       - /qa_en/products/**
       - /qa_en/ai/**
+      - /qa_en/education/**
+      - /qa_en/partnerpromo/**
+      - /qa_en/downloads/**
+      - /qa_en/careers/**
+      - /qa_en/affiliates/**
+      - /qa_en/check-in/**
+      - /qa_en/communities/**
+      - /qa_en/confirmation/**
+      - /qa_en/devnet/**
+      - /qa_en/diversity/**
     target: /qa_en/cc-shared/assets/query-index.xlsx
 
   cards-qa_en:
@@ -959,6 +1609,16 @@ indices:
       - /vn_en/creativecloud/**
       - /vn_en/products/**
       - /vn_en/ai/**
+      - /vn_en/education/**
+      - /vn_en/partnerpromo/**
+      - /vn_en/downloads/**
+      - /vn_en/careers/**
+      - /vn_en/affiliates/**
+      - /vn_en/check-in/**
+      - /vn_en/communities/**
+      - /vn_en/confirmation/**
+      - /vn_en/devnet/**
+      - /vn_en/diversity/**
     target: /vn_en/cc-shared/assets/query-index.xlsx
 
   cards-vn_en:
@@ -973,6 +1633,16 @@ indices:
       - /vn_vi/creativecloud/**
       - /vn_vi/products/**
       - /vn_vi/ai/**
+      - /vn_vi/education/**
+      - /vn_vi/partnerpromo/**
+      - /vn_vi/downloads/**
+      - /vn_vi/careers/**
+      - /vn_vi/affiliates/**
+      - /vn_vi/check-in/**
+      - /vn_vi/communities/**
+      - /vn_vi/confirmation/**
+      - /vn_vi/devnet/**
+      - /vn_vi/diversity/**
     target: /vn_vi/cc-shared/assets/query-index.xlsx 
 
   cards-vn_vi:
@@ -987,6 +1657,16 @@ indices:
       - /dk/creativecloud/**
       - /dk/products/**
       - /dk/ai/**
+      - /dk/education/**
+      - /dk/partnerpromo/**
+      - /dk/downloads/**
+      - /dk/careers/**
+      - /dk/affiliates/**
+      - /dk/check-in/**
+      - /dk/communities/**
+      - /dk/confirmation/**
+      - /dk/devnet/**
+      - /dk/diversity/**
     target: /dk/cc-shared/assets/query-index.xlsx
 
   cards-dk:
@@ -1001,6 +1681,16 @@ indices:
       - /fi/creativecloud/**
       - /fi/products/**
       - /fi/ai/**
+      - /fi/education/**
+      - /fi/partnerpromo/**
+      - /fi/downloads/**
+      - /fi/careers/**
+      - /fi/affiliates/**
+      - /fi/check-in/**
+      - /fi/communities/**
+      - /fi/confirmation/**
+      - /fi/devnet/**
+      - /fi/diversity/**
     target: /fi/cc-shared/assets/query-index.xlsx
 
   cards-fi:
@@ -1015,6 +1705,16 @@ indices:
       - /no/creativecloud/**
       - /no/products/**
       - /no/ai/**
+      - /no/education/**
+      - /no/partnerpromo/**
+      - /no/downloads/**
+      - /no/careers/**
+      - /no/affiliates/**
+      - /no/check-in/**
+      - /no/communities/**
+      - /no/confirmation/**
+      - /no/devnet/**
+      - /no/diversity/**
     target: /no/cc-shared/assets/query-index.xlsx
 
   cards-no:
@@ -1029,6 +1729,16 @@ indices:
       - /se/creativecloud/**
       - /se/products/**
       - /se/ai/**
+      - /se/education/**
+      - /se/partnerpromo/**
+      - /se/downloads/**
+      - /se/careers/**
+      - /se/affiliates/**
+      - /se/check-in/**
+      - /se/communities/**
+      - /se/confirmation/**
+      - /se/devnet/**
+      - /se/diversity/**
     target: /se/cc-shared/assets/query-index.xlsx
 
   cards-se:
@@ -1043,6 +1753,16 @@ indices:
       - /la/creativecloud/**
       - /la/products/**
       - /la/ai/**
+      - /la/education/**
+      - /la/partnerpromo/**
+      - /la/downloads/**
+      - /la/careers/**
+      - /la/affiliates/**
+      - /la/check-in/**
+      - /la/communities/**
+      - /la/confirmation/**
+      - /la/devnet/**
+      - /la/diversity/**
     target: /la/cc-shared/assets/query-index.xlsx
 
   cards-la:
@@ -1057,6 +1777,16 @@ indices:
       - /mx/creativecloud/**
       - /mx/products/**
       - /mx/ai/**
+      - /mx/education/**
+      - /mx/partnerpromo/**
+      - /mx/downloads/**
+      - /mx/careers/**
+      - /mx/affiliates/**
+      - /mx/check-in/**
+      - /mx/communities/**
+      - /mx/confirmation/**
+      - /mx/devnet/**
+      - /mx/diversity/**
     target: /mx/cc-shared/assets/query-index.xlsx
 
   cards-mx:
@@ -1071,6 +1801,16 @@ indices:
       - /be_nl/creativecloud/**
       - /be_nl/products/**
       - /be_nl/ai/**
+      - /be_nl/education/**
+      - /be_nl/partnerpromo/**
+      - /be_nl/downloads/**
+      - /be_nl/careers/**
+      - /be_nl/affiliates/**
+      - /be_nl/check-in/**
+      - /be_nl/communities/**
+      - /be_nl/confirmation/**
+      - /be_nl/devnet/**
+      - /be_nl/diversity/**
     target: /be_nl/cc-shared/assets/query-index.xlsx
 
   cards-be_nl:
@@ -1085,6 +1825,16 @@ indices:
       - /bg/creativecloud/**
       - /bg/products/**
       - /bg/ai/**
+      - /bg/education/**
+      - /bg/partnerpromo/**
+      - /bg/downloads/**
+      - /bg/careers/**
+      - /bg/affiliates/**
+      - /bg/check-in/**
+      - /bg/communities/**
+      - /bg/confirmation/**
+      - /bg/devnet/**
+      - /bg/diversity/**
     target: /bg/cc-shared/assets/query-index.xlsx
 
   cards-bg:
@@ -1099,6 +1849,16 @@ indices:
       - /ch_it/creativecloud/**
       - /ch_it/products/**
       - /ch_it/ai/**
+      - /ch_it/education/**
+      - /ch_it/partnerpromo/**
+      - /ch_it/downloads/**
+      - /ch_it/careers/**
+      - /ch_it/affiliates/**
+      - /ch_it/check-in/**
+      - /ch_it/communities/**
+      - /ch_it/confirmation/**
+      - /ch_it/devnet/**
+      - /ch_it/diversity/**
     target: /ch_it/cc-shared/assets/query-index.xlsx
 
   cards-ch_it:
@@ -1113,6 +1873,16 @@ indices:
       - /cz/creativecloud/**
       - /cz/products/**
       - /cz/ai/**
+      - /cz/education/**
+      - /cz/partnerpromo/**
+      - /cz/downloads/**
+      - /cz/careers/**
+      - /cz/affiliates/**
+      - /cz/check-in/**
+      - /cz/communities/**
+      - /cz/confirmation/**
+      - /cz/devnet/**
+      - /cz/diversity/**
     target: /cz/cc-shared/assets/query-index.xlsx
 
   cards-cz:
@@ -1127,6 +1897,16 @@ indices:
       - /ee/creativecloud/**
       - /ee/products/**
       - /ee/ai/**
+      - /ee/education/**
+      - /ee/partnerpromo/**
+      - /ee/downloads/**
+      - /ee/careers/**
+      - /ee/affiliates/**
+      - /ee/check-in/**
+      - /ee/communities/**
+      - /ee/confirmation/**
+      - /ee/devnet/**
+      - /ee/diversity/**
     target: /ee/cc-shared/assets/query-index.xlsx
 
   cards-ee:
@@ -1141,6 +1921,16 @@ indices:
       - /hu/creativecloud/**
       - /hu/products/**
       - /hu/ai/**
+      - /hu/education/**
+      - /hu/partnerpromo/**
+      - /hu/downloads/**
+      - /hu/careers/**
+      - /hu/affiliates/**
+      - /hu/check-in/**
+      - /hu/communities/**
+      - /hu/confirmation/**
+      - /hu/devnet/**
+      - /hu/diversity/**
     target: /hu/cc-shared/assets/query-index.xlsx
 
   cards-hu:
@@ -1155,6 +1945,16 @@ indices:
       - /il_he/creativecloud/**
       - /il_he/products/**
       - /il_he/ai/**
+      - /il_he/education/**
+      - /il_he/partnerpromo/**
+      - /il_he/downloads/**
+      - /il_he/careers/**
+      - /il_he/affiliates/**
+      - /il_he/check-in/**
+      - /il_he/communities/**
+      - /il_he/confirmation/**
+      - /il_he/devnet/**
+      - /il_he/diversity/**
     target: /il_he/cc-shared/assets/query-index.xlsx
 
   cards-il_he:
@@ -1169,6 +1969,16 @@ indices:
       - /lv/creativecloud/**
       - /lv/products/**
       - /lv/ai/**
+      - /lv/education/**
+      - /lv/partnerpromo/**
+      - /lv/downloads/**
+      - /lv/careers/**
+      - /lv/affiliates/**
+      - /lv/check-in/**
+      - /lv/communities/**
+      - /lv/confirmation/**
+      - /lv/devnet/**
+      - /lv/diversity/**
     target: /lv/cc-shared/assets/query-index.xlsx
 
   cards-lv:
@@ -1183,6 +1993,16 @@ indices:
       - /mena_ar/creativecloud/**
       - /mena_ar/products/**
       - /mena_ar/ai/**
+      - /mena_ar/education/**
+      - /mena_ar/partnerpromo/**
+      - /mena_ar/downloads/**
+      - /mena_ar/careers/**
+      - /mena_ar/affiliates/**
+      - /mena_ar/check-in/**
+      - /mena_ar/communities/**
+      - /mena_ar/confirmation/**
+      - /mena_ar/devnet/**
+      - /mena_ar/diversity/**
     target: /mena_ar/cc-shared/assets/query-index.xlsx
 
   cards-mena_ar:
@@ -1197,6 +2017,16 @@ indices:
       - /pt/creativecloud/**
       - /pt/products/**
       - /pt/ai/**
+      - /pt/education/**
+      - /pt/partnerpromo/**
+      - /pt/downloads/**
+      - /pt/careers/**
+      - /pt/affiliates/**
+      - /pt/check-in/**
+      - /pt/communities/**
+      - /pt/confirmation/**
+      - /pt/devnet/**
+      - /pt/diversity/**
     target: /pt/cc-shared/assets/query-index.xlsx
 
   cards-pt:
@@ -1211,6 +2041,16 @@ indices:
       - /ro/creativecloud/**
       - /ro/products/**
       - /ro/ai/**
+      - /ro/education/**
+      - /ro/partnerpromo/**
+      - /ro/downloads/**
+      - /ro/careers/**
+      - /ro/affiliates/**
+      - /ro/check-in/**
+      - /ro/communities/**
+      - /ro/confirmation/**
+      - /ro/devnet/**
+      - /ro/diversity/**
     target: /ro/cc-shared/assets/query-index.xlsx
 
   cards-ro:
@@ -1225,6 +2065,16 @@ indices:
       - /si/creativecloud/**
       - /si/products/**
       - /si/ai/**
+      - /si/education/**
+      - /si/partnerpromo/**
+      - /si/downloads/**
+      - /si/careers/**
+      - /si/affiliates/**
+      - /si/check-in/**
+      - /si/communities/**
+      - /si/confirmation/**
+      - /si/devnet/**
+      - /si/diversity/**
     target: /si/cc-shared/assets/query-index.xlsx
 
   cards-si:
@@ -1239,6 +2089,16 @@ indices:
       - /sk/creativecloud/**
       - /sk/products/**
       - /sk/ai/**
+      - /sk/education/**
+      - /sk/partnerpromo/**
+      - /sk/downloads/**
+      - /sk/careers/**
+      - /sk/affiliates/**
+      - /sk/check-in/**
+      - /sk/communities/**
+      - /sk/confirmation/**
+      - /sk/devnet/**
+      - /sk/diversity/**
     target: /sk/cc-shared/assets/query-index.xlsx
 
   cards-sk:
@@ -1253,6 +2113,16 @@ indices:
       - /ua/creativecloud/**
       - /ua/products/**
       - /ua/ai/**
+      - /ua/education/**
+      - /ua/partnerpromo/**
+      - /ua/downloads/**
+      - /ua/careers/**
+      - /ua/affiliates/**
+      - /ua/check-in/**
+      - /ua/communities/**
+      - /ua/confirmation/**
+      - /ua/devnet/**
+      - /ua/diversity/**
     target: /ua/cc-shared/assets/query-index.xlsx
 
   cards-ua:
@@ -1267,6 +2137,16 @@ indices:
       - /sg/creativecloud/**
       - /sg/products/**
       - /sg/ai/**
+      - /sg/education/**
+      - /sg/partnerpromo/**
+      - /sg/downloads/**
+      - /sg/careers/**
+      - /sg/affiliates/**
+      - /sg/check-in/**
+      - /sg/communities/**
+      - /sg/confirmation/**
+      - /sg/devnet/**
+      - /sg/diversity/**
     target: /sg/cc-shared/assets/query-index.xlsx
 
   cards-sg:
@@ -1281,6 +2161,16 @@ indices:
       - /br/creativecloud/**
       - /br/products/**
       - /br/ai/**
+      - /br/education/**
+      - /br/partnerpromo/**
+      - /br/downloads/**
+      - /br/careers/**
+      - /br/affiliates/**
+      - /br/check-in/**
+      - /br/communities/**
+      - /br/confirmation/**
+      - /br/devnet/**
+      - /br/diversity/**
     target: /br/cc-shared/assets/query-index.xlsx    
 
   cards-br:
@@ -1295,6 +2185,16 @@ indices:
       - /cis_en/creativecloud/**
       - /cis_en/products/**
       - /cis_en/ai/**
+      - /cis_en/education/**
+      - /cis_en/partnerpromo/**
+      - /cis_en/downloads/**
+      - /cis_en/careers/**
+      - /cis_en/affiliates/**
+      - /cis_en/check-in/**
+      - /cis_en/communities/**
+      - /cis_en/confirmation/**
+      - /cis_en/devnet/**
+      - /cis_en/diversity/**
     target: /cis_en/cc-shared/assets/query-index.xlsx    
 
   cards-cis_en:
@@ -1309,6 +2209,16 @@ indices:
       - /cis_ru/creativecloud/**
       - /cis_ru/products/**
       - /cis_ru/ai/**
+      - /cis_ru/education/**
+      - /cis_ru/partnerpromo/**
+      - /cis_ru/downloads/**
+      - /cis_ru/careers/**
+      - /cis_ru/affiliates/**
+      - /cis_ru/check-in/**
+      - /cis_ru/communities/**
+      - /cis_ru/confirmation/**
+      - /cis_ru/devnet/**
+      - /cis_ru/diversity/**
     target: /cis_ru/cc-shared/assets/query-index.xlsx    
 
   cards-cis_ru:
