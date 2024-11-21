@@ -49,7 +49,7 @@
       "id": "graybox-promote",
       "title": "Graybox Promote",
       "environments": [ "preview" ],
-      "url": "https://main--dc-graybox--adobecom.hlx.page/tools/graybox-promote?milolibs=grayboxui",
+      "url": "https://main--cc-graybox--adobecom.hlx.page/tools/graybox-promote?milolibs=grayboxui",
       "isPalette": true,
       "passReferrer": true,
       "passConfig": true,
