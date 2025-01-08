@@ -29,7 +29,7 @@
       "id": "localize-2",
       "title": "Localize (V2)",
       "environments": [ "edit" ],
-      "url": "https://main--cc--adobecom.hlx.page/tools/loc?milolibs=locui",
+      "url": "https://main--cc-graybox--adobecom.hlx.page/tools/loc?milolibs=locui",
       "passReferrer": true,
       "passConfig": true,
       "includePaths": [ "**.xlsx**" ]
