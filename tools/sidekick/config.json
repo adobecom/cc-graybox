@@ -20,7 +20,7 @@
       "id": "localize",
       "title": "Localize",
       "environments": [ "edit" ],
-      "url": "https://main--milo--adobecom.hlx.page/tools/loc/index.html?project=cc--adobecom",
+      "url": "https://main--milo--adobecom.aem.page/tools/loc/index.html?project=cc--adobecom",
       "passReferrer": true,
       "includePaths": [ "**/:x**" ]
     },
@@ -29,7 +29,7 @@
       "id": "localize-2",
       "title": "Localize (V2)",
       "environments": [ "edit" ],
-      "url": "https://main--cc-graybox--adobecom.hlx.page/tools/loc?milolibs=locui",
+      "url": "https://main--cc-graybox--adobecom.aem.page/tools/loc?milolibs=locui",
       "passReferrer": true,
       "passConfig": true,
       "includePaths": [ "**.xlsx**" ]
@@ -39,7 +39,7 @@
       "id": "floodgate",
       "title": "Floodgate",
       "environments": [ "edit" ],
-      "url": "https://main--cc--adobecom.hlx.page/tools/floodgate?milolibs=floodgateui",
+      "url": "https://main--cc--adobecom.aem.page/tools/floodgate?milolibs=floodgateui",
       "passReferrer": true,
       "passConfig": true,
       "includePaths": [ "**/:x**" ]
@@ -49,7 +49,7 @@
       "id": "graybox-promote",
       "title": "Graybox Promote",
       "environments": [ "edit" ],
-      "url": "https://main--cc-graybox--adobecom.hlx.page/tools/graybox-promote?milolibs=grayboxui",
+      "url": "https://main--cc-graybox--adobecom.aem.page/tools/graybox-promote?milolibs=grayboxui",
       "isPalette": true,
       "passReferrer": true,
       "passConfig": true,
@@ -153,7 +153,7 @@
       "id": "bulk",
       "title": "Bulk operations",
       "environments": [ "edit", "dev", "preview", "live" ],
-      "url": "https://main--cc--adobecom.hlx.page/tools/bulk-publish"
+      "url": "https://main--cc--adobecom.aem.page/tools/bulk-publish"
     }
   ]
 }
