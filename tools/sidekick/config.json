@@ -50,10 +50,8 @@
       "title": "Graybox Promote",
       "environments": [ "edit" ],
       "url": "https://main--cc-graybox--adobecom.aem.page/tools/graybox-promote?milolibs=grayboxui",
-      "isPalette": true,
       "passReferrer": true,
       "passConfig": true,
-      "paletteRect": "top: auto; bottom: 20px; left: 20px; height: 498px; width: 460px;",
       "includePaths": [ "*.json" ]
     },
     {
