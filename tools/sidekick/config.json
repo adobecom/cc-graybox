@@ -1,5 +1,6 @@
 {
   "project": "Creative Cloud",
+  "trustedHosts": ["milo.adobe.com", "main--milo--adobecom.hlx.page"],
   "plugins": [
     {
       "id": "library",
