@@ -49,7 +49,7 @@
       "id": "graybox-promote",
       "title": "Graybox Promote",
       "environments": [ "edit" ],
-      "url": "https://main--cc-graybox--adobecom.aem.page/tools/graybox-promote?milolibs=grayboxui",
+      "url": "https://main--cc-graybox--adobecom.aem.page/tools/graybox-promote?milolibs=grayboxuiv2",
       "passReferrer": true,
       "passConfig": true,
       "includePaths": [ "*.json" ]
