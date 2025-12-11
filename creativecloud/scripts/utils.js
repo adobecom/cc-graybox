@@ -18,7 +18,7 @@ const COOKIE_SIGNED_IN = 'acomsis';
 const COOKIE_SIGNED_IN_STAGE = 'acomsis_stage';
 const CHINA_SIGNED_IN_HOME_PATH = '/cn/creativecloud/roc/home';
 
-const locales = {
+export const locales = {
   // Americas
   ar: { ietf: 'es-AR', tk: 'oln4yqj.css' },
   br: { ietf: 'pt-BR', tk: 'inq1xob.css' },
@@ -215,6 +215,27 @@ export function isSignedInInitialized(interval = 200) {
     }
     poll();
   });
+}
+
+export function getScreenSizeCategory(overridenBreakpoints) {
+  const DEFAULT_BREAKPOINTS = { mobile: 599, tablet: 899 };
+  const { mobile, tablet } = { ...DEFAULT_BREAKPOINTS, ...overridenBreakpoints };
+  const MEDIA_QUERIES = {
+    mobile: window.matchMedia(`(max-width: ${mobile}px)`),
+    tablet: window.matchMedia(`(min-width: ${mobile + 1}px) and (max-width: ${tablet}px)`),
+    desktop: window.matchMedia(`(min-width: ${tablet + 1}px)`),
+  };
+  if (MEDIA_QUERIES.mobile.matches) {
+    return 'mobile';
+  }
+  if (MEDIA_QUERIES.tablet.matches) {
+    return 'tablet';
+  }
+  return 'desktop';
+}
+
+export function prefersReducedMotion() {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 function heroForegroundImage(firstBlock) {
