@@ -3,14 +3,11 @@ import { createTag, getScreenSizeCategory } from '../../scripts/utils.js';
 const CONFIG = {
   CARD_LIMIT: { desktop: 15, tablet: 9, mobile: 10 },
   API: {
-    KEY: 'milo-prm-yt-gallery',
-    SKIP_API_KEY: false,
     PRODUCT: 'creativecloud',
-    BASE_URL: 'https://stock.adobe.io/Rest/Media/1/Search/Collections',
+    BASE_URL: '/stock-api/Rest/Media/1/Search/Collections',
   },
   VIEWPORT: { mobile: 599, tablet: 1199 },
   EAGER_LOAD_COUNT: 6,
-  MOBILE_BREAKPOINT: '(max-width: 768px)',
 };
 
 // Default block properties
@@ -56,8 +53,6 @@ const ICONS = {
   `,
 };
 
-// ==================== Utility Functions ====================
-
 /**
  * Cleans URL by removing escaped forward slashes.
  */
@@ -84,17 +79,6 @@ const isIOSDevice = () => {
 const logError = (message) => {
   window.lana?.log(message, { tags: 'prm-yt-gallery' });
 };
-
-// Configures API base URL based on akamai query parameter.
-const configureApiBaseUrl = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.get('akamai') === 'on') {
-    CONFIG.API.BASE_URL = '/stock-api/Rest/Media/1/Search/Collections';
-    CONFIG.API.SKIP_API_KEY = true;
-  }
-};
-
-// ==================== Data Processing ====================
 
 /**
  * Normalizes API item to consistent internal structure.
@@ -129,10 +113,6 @@ const fetchAdobeStockData = async ({ collectionId, offset = 0, limit }) => {
   try {
     const apiUrl = buildApiUrl(collectionId, offset, limit);
     const headers = { 'x-product': CONFIG.API.PRODUCT };
-
-    if (!CONFIG.API.SKIP_API_KEY) {
-      headers['x-api-key'] = CONFIG.API.KEY;
-    }
 
     const response = await fetch(apiUrl, {
       method: 'GET',
@@ -181,16 +161,17 @@ const parseBlockProps = (block) => {
   return props;
 };
 
-// ==================== Card State Management ====================
-
 /**
  * Plays video with fade-in effect.
  */
 const playVideo = (video) => {
+  if (!video.paused && !video.ended) return;
   video.currentTime = 0;
   video.addEventListener('canplay', () => {
     video.style.opacity = 1;
-    video.play().catch(() => {});
+    video.play().catch((error) => {
+      logError(`Failed to play video: ${error.message}`);
+    });
   }, { once: true });
 };
 
@@ -214,20 +195,18 @@ const collapseCard = (card, video) => {
   if (video) video.pause();
 };
 
-// ==================== UI Element Creation ====================
-
 /**
  * Creates a reusable close button.
  */
-const createCloseButton = (className, ariaLabel, onClick, tabIndex = 0) => {
+const createCloseButton = (className, ariaLabel, onClick, tabIndex = 0, ariaDescribedby = '') => {
   const button = createTag('button', {
     class: className,
     'aria-label': ariaLabel,
     type: 'button',
-    'aria-describedby': 'overlayText',
+    'aria-describedby': ariaDescribedby,
     tabIndex,
   });
-  button.innerHTML = ICONS.close;
+  button.insertAdjacentHTML('beforeend', ICONS.close);
   button.addEventListener('click', (e) => {
     e.stopPropagation();
     onClick();
@@ -252,9 +231,9 @@ const createInfoButton = () => {
     class: CLASSES.INFO_BUTTON,
     'aria-label': 'Show info',
     type: 'button',
-    tabindex: isIOSDevice() ? '-1' : '0',
+    tabindex: '0',
   });
-  button.innerHTML = ICONS.info;
+  button.insertAdjacentHTML('beforeend', ICONS.info);
   return button;
 };
 
@@ -274,7 +253,6 @@ const createInfoOverlay = () => {
   const overlay = createTag('div', { class: CLASSES.INFO_OVERLAY });
   const overlayText = createTag('p', { class: CLASSES.OVERLAY_TEXT, tabindex: '-1' });
   overlay.append(overlayText);
-  overlayText.id = 'overlayText';
   return overlay;
 };
 
@@ -291,15 +269,13 @@ const createImageElement = (src, alt = '', eager = false) => createTag('img', {
  * Creates a video element with standard settings.
  */
 const createVideoElement = (src, posterUrl) => {
-  const video = createTag('video', { src, poster: posterUrl });
+  const video = createTag('video', { src, poster: posterUrl, tabindex: '-1' });
   video.muted = true;
   video.loop = true;
   video.playsInline = true;
   video.preload = 'metadata';
   return video;
 };
-
-// ==================== Card Creation and Updates ====================
 
 /**
  * Creates the close button for a specific card.
@@ -392,8 +368,6 @@ const updateCardWithData = (card, item, eager = false) => {
   }
 };
 
-// ==================== Event Handlers and Interactions ====================
-
 /**
  * Shows info overlay and pauses video.
  */
@@ -412,7 +386,9 @@ const showInfoOverlay = (card, video, closeOverlayButton) => {
 const hideInfoOverlay = (card, video) => {
   card.classList.remove(CLASSES.INFO_VISIBLE);
   if (video) {
-    video.play().catch(() => {});
+    video.play().catch((error) => {
+      logError(`Failed to resume video after closing info overlay: ${error.message}`);
+    });
   }
   card.querySelector(`.${CLASSES.OVERLAY_TEXT}`).scrollTop = 0;
 };
@@ -471,11 +447,14 @@ const handleEditButtonTabNavigation = (e, infoButton, card) => {
 const setupInfoOverlay = (card) => {
   const infoButton = card.querySelector(`.${CLASSES.INFO_BUTTON}`);
   const overlay = card.querySelector(`.${CLASSES.INFO_OVERLAY}`);
+  const overlayText = overlay.querySelector(`.${CLASSES.OVERLAY_TEXT}`);
   const closeCardButton = card.querySelector(`.${CLASSES.CLOSE_CARD_BUTTON}`);
   const video = card.querySelector(`.${CLASSES.VIDEO_WRAPPER} video`);
   const editButton = card.querySelector(`.${CLASSES.BUTTON}`);
 
   if (!infoButton || !overlay) return;
+  const overlayTextId = `overlayText-${crypto.randomUUID()}`;
+  overlayText.id = overlayTextId;
 
   // Create and append overlay close button
   // chnage here
@@ -484,9 +463,14 @@ const setupInfoOverlay = (card) => {
     'Close info',
     () => {
       hideInfoOverlay(card, video);
-      if (window.screen.width > 500) { card?.querySelector('.pre-yt-info-button')?.focus(); }
+      if (window.screen.width > 500) {
+        card?.querySelector('.pre-yt-info-button')?.focus();
+      } else {
+        card.querySelector(`.${CLASSES.CLOSE_CARD_BUTTON}`).focus();
+      }
     },
     -1,
+    overlayTextId,
   );
   overlay.appendChild(closeOverlayButton);
 
@@ -518,17 +502,17 @@ const setupInfoOverlay = (card) => {
 /**
  * Sets up card interaction handlers (hover, focus, click).
  */
-const setupCardInteractions = (card, isMobile) => {
+const setupCardInteractions = (card) => {
   const video = card.querySelector(`.${CLASSES.VIDEO_WRAPPER} video`);
 
-  // Mobile: expand on click
-  if (isMobile) {
+  // Mobile/Tablet: expand on click, Desktop: expand on hover
+  if (getScreenSizeCategory(CONFIG.VIEWPORT) === 'mobile' || getScreenSizeCategory(CONFIG.VIEWPORT) === 'tablet') {
     card.addEventListener('click', () => expandCard(card, video));
+  } else {
+    // Desktop: expand on hover
+    card.addEventListener('mouseenter', () => expandCard(card, video));
+    card.addEventListener('mouseleave', () => collapseCard(card, video));
   }
-
-  // Desktop: expand on hover
-  card.addEventListener('mouseenter', () => expandCard(card, video));
-  card.addEventListener('mouseleave', () => collapseCard(card, video));
 
   // Keyboard navigation: expand on focus (only if coming from outside the card)
   card.addEventListener('focusin', (e) => {
@@ -550,13 +534,9 @@ const setupCardInteractions = (card, isMobile) => {
  * Sets up interactions for all cards in the container.
  */
 const setupVideoHoverBehavior = (container) => {
-  const isMobile = window.matchMedia(CONFIG.MOBILE_BREAKPOINT).matches;
   const cards = container.querySelectorAll(`.${CLASSES.CARD}`);
-
-  cards.forEach((card) => setupCardInteractions(card, isMobile));
+  cards.forEach((card) => setupCardInteractions(card));
 };
-
-// ==================== Rendering Functions ====================
 
 /**
  * Renders shimmer placeholder cards.
@@ -601,16 +581,11 @@ const updateCardsWithData = (container, data, cardLimit, freeTagText) => {
   setupVideoHoverBehavior(container);
 };
 
-// ==================== Main Initialization ====================
-
 /**
  * Initializes the gallery block.
  */
 export default async function init(el) {
   const blockProps = parseBlockProps(el);
-
-  // Configure API base URL based on akamai query parameter
-  configureApiBaseUrl();
 
   if (!blockProps.collectionId) {
     logError('Collection ID is required for prm-yt-gallery');

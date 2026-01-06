@@ -83,7 +83,6 @@
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity var(--transition-default);
 }
 
 .pre-yt-card-inner .video-wrapper video {
@@ -107,13 +106,12 @@
   box-sizing: border-box;
   font-weight: 400;
   line-height: 1.5em;
-  width: 23.33px;
   height: 13.58px;
   font-size: 7.23px;
   padding: 1.03px 5.17px 1.55px;
   border-start-start-radius: 2.07px;
   border-end-start-radius: 2.07px;
-  z-index: 5;
+  z-index: 4;
 }
 
 /* ====================
@@ -135,9 +133,12 @@
   text-decoration: none;
   white-space: nowrap;
   line-height: 15px;
+  z-index: 2;
+  max-width: calc(100% - 50px);
+  overflow: hidden;
+  text-overflow: ellipsis;
   opacity: 0;
   transition: opacity var(--transition-default);
-  z-index: 2;
 }
 
 .pre-yt-card.expanded.info-visible .pre-yt-card-inner .pre-yt-button {
@@ -155,12 +156,12 @@
   background: #f3f3f3;
   border-radius: 11px;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity var(--transition-default);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
+  opacity: 0;
+  transition: opacity var(--transition-default);
 }
 
 .pre-yt-card-inner .pre-yt-close-card-button {
@@ -362,11 +363,11 @@
     padding: 6px 21px;
     border-radius: 23px;
     line-height: 22.164px;
+    max-width: calc(100% - 60px);
   }
 
   /* Free tag adjustments */
   .pre-yt-card .pre-yt-free-tag {
-    width: 33.77px;
     height: 19.69px;
     font-size: 10.34px;
     padding: 1.48px 7.38px 2.22px;
@@ -412,15 +413,15 @@
     transform: scale(1.116);
   }
 
-  /* Hide mobile/tablet buttons */
+  /* Hide mobile/tablet buttons - including expanded state */
   .pre-yt-card-inner .pre-yt-button,
+  .pre-yt-card.expanded .pre-yt-button,
   .pre-yt-card-inner .pre-yt-close-card-button {
     display: none;
   }
 
   /* Free tag adjustments */
   .pre-yt-card .pre-yt-free-tag {
-    width: 45px;
     height: 26px;
     font-size: 14px;
     padding: 2px 10px 3px;
