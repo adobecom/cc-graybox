@@ -61,7 +61,7 @@ const cleanUrl = (url) => (url ? url.replace(/\\\//g, '/') : '');
 /**
  * Generates template deep link URL.
  */
-const createTemplateDeepLink = (templateId) => `https://premierepro.app.link/1RdAjG4WyYb?template_id=${templateId}`;
+const createTemplateDeepLink = (templateId) => `https://premierepro.app.link/gRUEA7oVAYb?template_id=${templateId}`;
 
 /**
  * Detects if the user is on an iOS device.
