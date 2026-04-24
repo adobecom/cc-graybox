@@ -178,7 +178,6 @@ export const [setLibs, getLibs] = (() => {
         return libs;
       }
       const branch = new URLSearchParams(window.location.search).get('milolibs') || 'main';
-      if (!/^[a-zA-Z0-9_-]+$/.test(branch)) throw new Error('Invalid branch name.');
       if (branch === 'local') { libs = 'http://localhost:6456/libs'; return libs; }
       const env = hostname.includes('.hlx.') ? 'hlx' : 'aem';
       if (branch.indexOf('--') > -1) { libs = `https://${branch}.${env}.live/libs`; return libs; }
@@ -463,6 +462,7 @@ export const scriptInit = async () => {
 
   (async function loadPage() {
     loadLana({ clientId: 'cc' });
+    (await import('../features/crm-modal-lana/crm-modal-lana.js')).default();
     await loadArea();
   }());
 };
