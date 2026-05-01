@@ -1,0 +1,33 @@
+.catalog.app {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: min-content 1fr;
+  align-items: start;
+  grid-template-areas: 'sidenav header' 'sidenav content';
+  justify-content: center;
+  min-height: 400px;
+}
+
+@media screen and (min-width: 1200px) {
+  .collection-container.catalog {
+    --merch-card-collection-sidenav-margin: 36px;
+  }
+
+  /* Should remove this style after merging the Milo PR */
+  .collection-container.catalog > merch-sidenav {
+    margin-right: 36px;
+  }
+}
+
+.catalog.app > merch-sidenav {
+  grid-area: sidenav;
+}
+
+.catalog.app > merch-card-collection-header {
+  grid-area: header;
+}
+
+.catalog.app > merch-card-collection {
+  grid-area: content;
+  padding: 0;
+}

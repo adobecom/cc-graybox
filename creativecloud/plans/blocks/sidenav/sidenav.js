@@ -1,0 +1,290 @@
+import { createTag, localizeLink, getLibs } from '../../scripts/utils.js';
+
+const CATEGORY_ID_PREFIX = 'categories/';
+const TYPE_ID_PREFIX = 'types/';
+
+// allows improve TBT by returning control to the main thread.
+// eslint-disable-next-line no-promise-executor-return
+const makePause = async (timeout = 0) => new Promise((resolve) => setTimeout(resolve, timeout));
+
+const getIdLeaf = (id) => (id?.substring(id.lastIndexOf('/') + 1) || id).toLowerCase();
+
+const computeDaaLLText = (text) => {
+  const tokens = text.split('-');
+  if (tokens.length === 1) {
+    return text;
+  }
+  return tokens
+    .filter((token) => token !== 'and')
+    .map((token) => token.substring(0, 3))
+    .join('-');
+};
+
+const generateDaaLL = (text, headline) => `${text}--${headline}`;
+
+const getMasLibsBaseUrl = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const masLibs = urlParams.get('maslibs');
+
+  if (!masLibs || masLibs.trim() === '') return null;
+
+  const sanitized = masLibs.trim().toLowerCase();
+
+  if (sanitized === 'local') {
+    return 'http://localhost:3000';
+  }
+
+  if (sanitized === 'main') {
+    return 'https://main--mas--adobecom.aem.live';
+  }
+
+  const { hostname } = window.location;
+  const extension = hostname.endsWith('.page') ? 'page' : 'live';
+
+  let branch = sanitized;
+  if (!sanitized.includes('--')) {
+    branch = `${sanitized}--mas--adobecom`;
+  }
+
+  return `https://${branch}.aem.${extension}`;
+};
+
+const getMasLibs = () => {
+  const baseUrl = getMasLibsBaseUrl();
+  if (!baseUrl) return null;
+  return `${baseUrl}/web-components/dist`;
+};
+
+const getMasComponentUrl = (componentName, masLibsBase, hostname) => {
+  if (masLibsBase) {
+    return `${masLibsBase}/${componentName}.js`;
+  }
+  const isAdobeProd = hostname === 'www.adobe.com';
+  return isAdobeProd
+    ? `https://www.adobe.com/mas/libs/${componentName}.js`
+    : `https://main--mas--adobecom.aem.live/web-components/dist/${componentName}.js`;
+};
+
+const failedExternalLoads = new Set();
+const loadingPromises = new Map();
+
+const loadMasComponent = async (componentName) => {
+  if (loadingPromises.has(componentName)) {
+    return loadingPromises.get(componentName);
+  }
+
+  if (customElements.get(componentName)) {
+    return Promise.resolve();
+  }
+
+  const loadPromise = (async () => {
+    const masLibsBase = getMasLibs();
+    const targetUrl = getMasComponentUrl(componentName, masLibsBase, window.location.hostname);
+
+    if (failedExternalLoads.has(targetUrl)) {
+      throw new Error(`Previously failed to load component from ${targetUrl}`);
+    }
+
+    try {
+      return await import(targetUrl);
+    } catch (error) {
+      failedExternalLoads.add(targetUrl);
+      throw error;
+    }
+  })();
+
+  loadingPromises.set(componentName, loadPromise);
+  loadPromise.finally(() => loadingPromises.delete(componentName));
+
+  return loadPromise;
+};
+
+const getCategories = (items, isMultilevel, mapCategories) => {
+  const configuration = { manageTabIndex: true };
+  if (isMultilevel) {
+    configuration.variant = 'multilevel';
+  }
+  const mapParents = [];
+  const tag = createTag('sp-sidenav', configuration);
+  const merchTag = createTag('merch-sidenav-list', { deeplink: 'category', 'daa-lh': 'b2|filters' });
+  merchTag.append(tag);
+  items.forEach((item) => {
+    if (item?.id) {
+      let parent = tag;
+      const value = getIdLeaf(item.id);
+      // first token is type, second is parent category
+      const isParent = item.id.split('/').length <= 2;
+      const itemTag = createTag('sp-sidenav-item', {
+        label: item.name,
+        value,
+        'daa-ll': generateDaaLL(computeDaaLLText(value), 'cat'),
+      });
+      if (item.icon) {
+        item.icon.setAttribute('slot', 'icon');
+        itemTag.append(item.icon);
+      }
+      if (isParent) {
+        mapParents[value] = itemTag;
+        tag.append(itemTag);
+      } else {
+        const parentId = getIdLeaf(item.id.substring(0, item.id.lastIndexOf('/')));
+        if (isMultilevel) {
+          if (!mapParents[parentId]) {
+            const parentItem = mapCategories[parentId];
+            if (parentItem) {
+              mapParents[parentId] = createTag('sp-sidenav-item', {
+                label: parentItem.name,
+                value: parentId,
+                'daa-ll': generateDaaLL(computeDaaLLText(value), 'cat'),
+              });
+              tag.append(mapParents[parentId]);
+            }
+          }
+          parent = mapParents[parentId];
+        }
+        parent?.append(itemTag);
+      }
+    }
+  });
+  return merchTag;
+};
+
+const getTypes = (arrayTypes, typeText) => {
+  const tag = createTag('merch-sidenav-checkbox-group', { sidenavCheckboxTitle: typeText, deeplink: 'types', 'daa-lh': 'b3|types' });
+  arrayTypes.forEach((item) => {
+    if (item.name?.length > 0) {
+      const checkbox = createTag('sp-checkbox', {
+        emphasized: '',
+        name: getIdLeaf(item.id),
+        'daa-ll': generateDaaLL(item.name, 'types'),
+      });
+      checkbox.append(item.name);
+      tag.append(checkbox);
+    }
+  });
+  return tag;
+};
+
+const appendFilters = async (root, link, explicitCategoriesElt, typeText) => {
+  try {
+    const resp = await fetch(link);
+    if (resp.ok) {
+      const json = await resp.json();
+      const mapCategories = {};
+      let categoryValues = [];
+      const types = [];
+      json.data.forEach((item) => {
+        if (item.id?.startsWith(CATEGORY_ID_PREFIX)) {
+          const value = getIdLeaf(item.id);
+          mapCategories[value] = item;
+          categoryValues.push({ value });
+        } else if (item.id?.startsWith(TYPE_ID_PREFIX)) {
+          types.push(item);
+        }
+      });
+      if (explicitCategoriesElt) {
+        categoryValues = Array.from(explicitCategoriesElt.querySelectorAll('li'))
+          .map((item) => ({
+            value: item.textContent.trim().toLowerCase(),
+            icon: item.querySelector('picture'),
+          }));
+      }
+      let shallowCategories = true;
+      if (categoryValues.length > 0) {
+        await makePause();
+        const items = categoryValues.map(({ value, icon }) => ({ ...mapCategories[value], icon }));
+        const parentValues = new Set(items.map(({ id }) => id?.split('/')[1]));
+        // all parent will always be here without children,
+        // so shallow is considered below 2 parents
+        shallowCategories = parentValues.size <= 2;
+        const categoryTags = getCategories(items, !shallowCategories, mapCategories);
+        root.append(categoryTags);
+      }
+      if (typeText && types.length > 0) {
+        await makePause();
+        root.append(getTypes(types, typeText));
+      }
+    }
+  } catch (e) {
+    window.lana?.log(`unable to properly fetch sidenav data: ${e}`);
+  }
+};
+
+function appendSearch(rootNav, searchText) {
+  if (searchText) {
+    const spectrumSearch = createTag('sp-search', { placeholder: searchText });
+    const search = createTag('merch-search', { deeplink: 'search' });
+    search.append(spectrumSearch);
+    rootNav.append(search);
+  }
+}
+
+function appendResources(rootNav, resourceLink) {
+  const literals = resourceLink.textContent.split(':');
+  const sidenavListTitle = literals[0].trim();
+  const tag = createTag('sp-sidenav', { manageTabIndex: true, class: 'resources' });
+  const merchTag = createTag('merch-sidenav-list', { sidenavListTitle, 'daa-ll': generateDaaLL(sidenavListTitle, 'resources') });
+  merchTag.append(tag);
+  const label = literals[1].trim();
+  const ariaLabel = resourceLink.getAttribute('aria-label') || '';
+  const link = createTag('sp-sidenav-item', { href: resourceLink.href, 'daa-ll': generateDaaLL(sidenavListTitle, 'special-offers'), target: '_blank', selected: false });
+  if (resourceLink.href && resourceLink.href.startsWith('http')) {
+    link.append(document.createTextNode(label));
+    const icon = createTag('sp-icon-link-out-light', { class: 'right', slot: 'icon', label });
+    link.append(icon);
+    link.updateComplete.then(() => {
+      link.shadowRoot?.querySelector('a')?.setAttribute('aria-label', ariaLabel);
+    });
+  }
+  tag.append(link);
+  rootNav.append(merchTag);
+}
+
+export default async function init(el) {
+  const libs = getLibs();
+  const { decorateLinks } = await import(`${libs}/utils/utils.js`);
+  decorateLinks(el);
+  const [mainRow, categoryRow] = Array.from(el.children);
+  const deps = Promise.all([
+    loadMasComponent('merch-sidenav'),
+    // eslint-disable-next-line import/no-unresolved, import/no-absolute-path
+    import(`${libs}/deps/lit-all.min.js`),
+    import(`${libs}/features/spectrum-web-components/dist/theme.js`),
+    import(`${libs}/features/spectrum-web-components/dist/base.js`),
+    import(`${libs}/features/spectrum-web-components/dist/shared.js`),
+    import(`${libs}/features/spectrum-web-components/dist/sidenav.js`),
+    import(`${libs}/features/spectrum-web-components/dist/search.js`),
+    import(`${libs}/features/spectrum-web-components/dist/checkbox.js`),
+    import(`${libs}/features/spectrum-web-components/dist/dialog.js`),
+    import(`${libs}/features/spectrum-web-components/dist/link.js`),
+    import(`${libs}/features/spectrum-web-components/dist/overlay.js`),
+  ]);
+
+  const sidenavTitle = mainRow?.querySelector('h2,h3')?.textContent.trim();
+  const searchText = mainRow?.querySelector('p > strong')?.textContent.trim();
+  const typeText = mainRow?.querySelector('p > em')?.textContent.trim();
+  // eslint-disable-next-line prefer-const
+  const resourcesLink = mainRow?.querySelector('a');
+  let endpoint = categoryRow?.querySelector('a');
+  await deps;
+  const rootNav = createTag('merch-sidenav', { sidenavTitle });
+  el.replaceWith(rootNav);
+  appendSearch(rootNav, searchText);
+  if (endpoint) {
+    await makePause();
+    endpoint = localizeLink(endpoint.href, null, true);
+    const explicitCategories = categoryRow?.querySelector('ul');
+    performance.mark('sidenav:appendFilters:start');
+    await appendFilters(rootNav, endpoint, explicitCategories, typeText);
+    performance.mark('sidenav:appendFilters:end');
+    performance.measure('sidenav:appendFilters', 'sidenav:appendFilters:start', 'sidenav:appendFilters:end');
+  }
+  if (resourcesLink) {
+    await makePause();
+    appendResources(rootNav, resourcesLink);
+  }
+  const collection = document.querySelector('merch-card-collection');
+  // Should remove this if after merging the 'plans' cumulative branch in Milo
+  if (collection && collection.attachSidenav) collection.attachSidenav(rootNav, false);
+  return rootNav;
+}
