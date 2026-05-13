@@ -1,0 +1,13 @@
+@media (min-width: 900px) {
+  body .feds-topnav-wrapper {
+    border: 0;
+  }  
+}
+
+body .global-footer {
+  background: none;
+}
+
+.universal-promo-terms img {
+  min-height: 72px;
+}
